@@ -11,8 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('./src/app.js', 'dist/')
-   .sass('./src/app.scss', 'dist/')
+mix.setPublicPath('dist/');
+
+mix.js('./src/app.js', '')
+   .sass('./src/app.scss', '')
    .extract([
         'datatables.net', 'datatables.net-bs', 'datatables.net-select', 'datatables.net-buttons', 'datatables.net-buttons-bs',
     ])
